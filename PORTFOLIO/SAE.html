@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes SAÉ | Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --accent: #0d9488;
+            --accent-light: #f0fdfa;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--primary);
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin-bottom: 5rem;
+            scroll-margin-top: 100px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2.5rem;
+            color: #1e3a8a;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .card .subtitle {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-tag {
+            font-size: 0.75rem;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .initiative-tag {
+            font-size: 0.75rem;
+            background-color: var(--accent-light);
+            color: var(--accent);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .links {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .links a {
+            color: var(--text-main);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 5rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="active">Accueil</a>
+    <a href="SAE.html">Mes SAÉ</a>
+    <a href="mesdiplomes.html">Mes Diplômes</a>
+    <a href="mescoordonnées.html">Contact</a>
+</nav>
+
+    <main>
+
+        <!-- SEMESTRE 1 -->
+        <section id="semestre1">
+            <h2>SAÉ — Semestre 1</h2>
+            <div class="grid">
+
+                <!-- SAÉ 1.1 -->
+                <div class="card">
+                    <div>
+                        <h3>SAÉ 1.1 | Hygiène Informatique & Cyber</h3>
+                        <div class="subtitle">Sensibilisation & Vulgarisation</div>
+                        <p>Création de contenus pédagogiques vidéo et de supports d'évaluation interactifs (Kahoot). Explications ciblées sur l'Authentification Unifiée (SSO) et diptyque de vidéos sur le DDoS (vulgarisation grand public et approche technique approfondie).</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="skills-list">
+                            <span class="skill-tag">Cybersécurité</span>
+                            <span class="skill-tag">SSO</span>
+                            <span class="skill-tag">DDoS</span>
+                            <span class="skill-tag">Pédagogie</span>
+                        </div>
+                        <div class="links">
+                            <span>🎥 Vidéos réalisées</span>
+                            <a href="https://create.kahoot.it/share/quiz-sso/7c412194-7591-4a9a-bb4b-3a125d88b98d" target="_blank">🔗 Quiz SSO</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAÉ 1.2 -->
+                <div class="card">
+                    <div>
+                        <h3>SAÉ 1.2 | S'initier aux Réseaux</h3>
+                        <div class="subtitle">Configuration Headless & Automatisation</div>
+                        <span class="initiative-tag">💡 Initiative : Script Bash développé en avance</span>
+                        <p>Configuration complète en mode "headless" d'un Raspberry Pi (en binôme avec Sebastian). Suite à la validation rapide des objectifs, conception d'un script Bash d'automatisation complète de la procédure de déploiement.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="skills-list">
+                            <span class="skill-tag">Linux / Debian</span>
+                            <span class="skill-tag">Raspberry Pi</span>
+                            <span class="skill-tag">Bash Scripting</span>
+                            <span class="skill-tag">Headless</span>
+                        </div>
+                        <div class="links">
+                            <span>📄 CR_SAE1.02.pdf</span>
+                            <span>⚙️ programme.sh</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAÉ 1.3 -->
+                <div class="card">
+                    <div>
+                        <h3>SAÉ 1.3 | Dispositif de Transmission</h3>
+                        <div class="subtitle">Découverte de GNU Radio</div>
+                        <p>Travail d'équipe (Nathan, Thibault, Sebastian) axé sur la compréhension des architectures radio logicielle (SDR). Modélisation, manipulation théorique et pratique de chaînes de transmission via le logiciel GNU Radio companion.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="skills-list">
+                            <span class="skill-tag">GNU Radio</span>
+                            <span class="skill-tag">SDR</span>
+                            <span class="skill-tag">Télécoms</span>
+                            <span class="skill-tag">Travail d'équipe</span>
+                        </div>
+                        <div class="links">
+                            <span>📄 Rapport.pdf</span>
+                            <span>📊 Diaporama.odp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAÉ 1.4 -->
+                <div class="card">
+                    <div>
+                        <h3>SAÉ 1.4 | Se Présenter sur Internet</h3>
+                        <div class="subtitle">Création du Portfolio</div>
+                        <span class="initiative-tag">✨ Projet Principal : Ce Portfolio</span>
+                        <p>Conception, structuration sémantique et mise en page d'un site web vitrine responsive à l'aide des langages HTML5 et CSS3, servant de support final à la valorisation de l'ensemble de mes compétences académiques.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="skills-list">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAÉ 1.5 -->
+                <div class="card">
+                    <div>
+                        <h3>SAÉ 1.5 | Traiter des Données</h3>
+                        <div class="subtitle">Parsing de Logs & Géolocalisation</div>
+                        <p>Création d'un programme Python extrayant les adresses IP à partir d'un fichier de logs serveurs. Structuration et stockage des données collectées dans un fichier CSV, puis génération d'une carte mondiale interactive de localisation des accès au site.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="skills-list">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">CSV</span>
+                            <span class="skill-tag">Data Processing</span>
+                            <span class="skill-tag">Géolocalisation</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEMESTRE 2 -->
+        <section id="semestre2">
+            <h2>SAÉ — Semestre 2</h2>
+            <div class="grid">
+
+                <!-- SAÉ 2.1 -->
+                <div class="card">
+                    <div>
+                        <h3>SAÉ 2.1 | Réseau Petite Structure</h3>
+                        <div class="subtitle">Architecture de Réseau Local</div>
+                        <p>Étude, dimensionnement et planification d'une infrastructure réseau complète (LAN/WLAN) répondant précisément au cahier des charges d'une petite structure professionnelle.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="skills-list">
+                            <span class="skill-tag">Architecture LAN</span>
+                            <span class="skill-tag">Adressage IP</span>
+                            <span class="skill-tag">Routage / Commutation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAÉ 2.2 -->
+                <div class="card">
+                    <div>
+                        <h3>SAÉ 2.2 | Mesurer & Caractériser un Signal</h3>
+                        <div class="subtitle">Analyse Spectrale & Espace Hertzien</div>
+                        <p>Étude théorique (GNU Radio) et expérimentations concrètes sur le terrain (avec M. Bonnamy). Utilisation de l'analyseur de spectre TinySA ULTRA pour auditer et caractériser l'occupation spectrale des bandes Radio (FM/DAB+), Téléphonie (2G à 5G) et Wi-Fi 2.4 GHz.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="skills-list">
+                            <span class="skill-tag">TinySA ULTRA</span>
+                            <span class="skill-tag">Analyse Spectrale</span>
+                            <span class="skill-tag">Codage NRZ</span>
+                            <span class="skill-tag">Modulation</span>
+                        </div>
+                        <div class="links">
+                            <span>📄 SAE22Brosset_Bonnamy.pdf</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAÉ 2.3 -->
+                <div class="card">
+                    <div>
+                        <h3>SAÉ 2.3 | Solution Informatique d'Entreprise</h3>
+                        <div class="subtitle">Plateforme IoT de Bout en Bout</div>
+                        <p>Conception d'une architecture sécurisée articulant collecte, stockage et visualisation de données issues de capteurs connectés. Analyse rigoureuse des vulnérabilités de l'écosystème IoT déployé.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="skills-list">
+                            <span class="skill-tag">Écosystème IoT</span>
+                            <span class="skill-tag">Bases de Données</span>
+                            <span class="skill-tag">Supervision</span>
+                            <span class="skill-tag">Sécurité IoT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAÉ 2.4 -->
+                <div class="card">
+                    <div>
+                        <h3>SAÉ 2.4 | Projet Intégratif</h3>
+                        <div class="subtitle">Développement Logiciel Orienté Sécurité</div>
+                        <p>Synthèse avancée combinant programmation Python (manipulation de paquets bas niveau) et analyse de protocoles. Objectif axé sur la mise en évidence des failles de sécurité majeures dans les architectures internet courantes.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="skills-list">
+                            <span class="skill-tag">Python Avancé</span>
+                            <span class="skill-tag">Analyse Protocoles</span>
+                            <span class="skill-tag">Scapy / Sockets</span>
+                            <span class="skill-tag">Cyber Offensive</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+         <h2>Contact & Liens</h2>
+            <p style="text-align: center; color: var(--text-muted); font-size: 1.1rem;">
+             📧 Émail : <a href="mailto:bonnamy.tristan25@email.com" style="color: var(--text-main); font-weight: 600; text-decoration: none;">bonnamy.tristan25@email.com</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+             📱 Téléphone : <a href="tel:+33786064514" style="color: var(--text-main); font-weight: 600; text-decoration: none;">07 86 06 45 14</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+              💼 LinkedIn : <a href="https://linkedin.com/in/tristan-bonnamy-5243b9413/" target="_blank" style="color: var(--text-main); font-weight: 600; text-decoration: none;">tristan-bonnamy</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+               💻 GitHub : <a href="https://github.com/Ti-ti25" target="_blank" style="color: var(--text-main); font-weight: 600; text-decoration: none;">Ti-ti25</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Portfolio BUT Réseaux & Télécommunications. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Diplômes | Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--primary);
+        }
+
+        main {
+            max-width: 800px;
+            width: 100%;
+            margin: auto;
+            padding: 2rem 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #1e3a8a;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .diploma-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .diploma-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .diploma-title {
+            font-size: 1.2rem;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .diploma-date {
+            background-color: var(--primary-light);
+            color: var(--primary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .diploma-school {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .diploma-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .diploma-tags {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+            margin-top: 0.8rem;
+        }
+
+        .diploma-tag {
+            font-size: 0.75rem;
+            background-color: #f1f5f9;
+            color: #475569;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="SAE.html">Mes SAÉ</a>
+        <a href="mesdiplomes.html" class="active">Mes Diplômes</a>
+        <a href="mescoordonnées.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>Mon Parcours & Diplômes</h1>
+
+        <div class="timeline">
+
+            <div class="diploma-card">
+                <div class="diploma-header">
+                    <div class="diploma-title">BUT Réseaux & Télécommunications</div>
+                    <div class="diploma-date">En cours (2025 - 2028)</div>
+                </div>
+                <div class="diploma-school">IUT - En formation</div>
+                <p class="diploma-desc">Spécialisation dans l'administration des réseaux informatiques, la cybersécurité, le scripting de haut et bas niveau (Python/Bash) et la gestion des infrastructures télécoms.</p>
+                <div class="diploma-tags">
+                    <span class="diploma-tag">Réseaux LAN/WAN</span>
+                    <span class="diploma-tag">Cybersécurité</span>
+                    <span class="diploma-tag">Linux / Debian</span>
+                </div>
+            </div>
+
+            <div class="diploma-card">
+                <div class="diploma-header">
+                    <div class="diploma-title">Baccalauréat STI2D</div>
+                    <div class="diploma-date">Obtenu en 2025</div>
+                </div>
+                <div class="diploma-school">Lycée Maine De Biran</div>
+                <p class="diploma-desc">Sciences et Technologies de l'Industrie et du Développement Durable. Formation axée sur les bases des systèmes d'information, le développement de projets technologiques et la compréhension des flux d'énergie et d'informations.</p>
+                <div class="diploma-tags">
+                    <span class="diploma-tag">Systèmes & Information</span>
+                    <span class="diploma-tag">Gestion de Projet</span>
+                    <span class="diploma-tag">Démarche Ingénieur</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Portfolio BUT Réseaux & Télécommunications. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
