@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Coordonnées | Portfolio</title>
+    <title>Contact | Portfolio</title>
     <style>
         :root {
             --bg-color: #f8fafc;
@@ -23,23 +23,22 @@
         }
 
         body {
-            background-color: var(--bg-color);
+            background: linear-gradient(135deg, #1e3a8a, #0f172a);
             color: var(--text-main);
             line-height: 1.6;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            height: 100vh; /* Force le body à prendre tout l'écran */
+            overflow: hidden; /* Évite les barres de défilement inutiles */
         }
 
         nav {
-            background-color: var(--card-bg);
+            background-color: #ffffff;
             border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
             display: flex;
             justify-content: center;
             padding: 1rem;
+            height: 60px;
         }
 
         nav a {
@@ -51,84 +50,67 @@
         }
 
         nav a.active, nav a:hover {
-            color: var(--primary);
+            color: var(--primary) !important;
         }
 
         main {
             flex-grow: 1;
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 2rem;
+            align-items: center; /* Centre verticalement la boîte */
+            padding: 1rem;
         }
 
-        .contact-container {
+        .contact-box {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 3rem;
-            max-width: 550px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+            max-width: 500px;
             width: 100%;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
             text-align: center;
         }
 
         h1 {
             font-size: 2rem;
             color: #1e3a8a;
-            margin-bottom: 0.5rem;
-        }
-
-        .subtitle {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .contact-methods {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            text-align: left;
             margin-bottom: 2rem;
         }
 
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
         .contact-item {
+            font-size: 1.05rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border);
             display: flex;
             align-items: center;
-            background-color: var(--primary-light);
-            padding: 1rem;
-            border-radius: 8px;
-            border: 1px solid #dbeafe;
-            transition: transform 0.2s;
+            justify-content: flex-start; /* Aligne le contenu à gauche à l'intérieur */
         }
 
-        .contact-item:hover {
-            transform: translateX(5px);
+        .contact-item strong {
+            margin-left: 0.5rem; /* Espace après l'émoji */
+            margin-right: 0.5rem; /* Espace avant le lien */
+            color: var(--text-main);
         }
 
-        .icon {
-            font-size: 1.5rem;
-            margin-right: 1.2rem;
-        }
-
-        .info-label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .contact-item a, .contact-item span {
-            display: block;
+        .contact-item a {
             color: var(--primary);
-            font-weight: 600;
             text-decoration: none;
-            font-size: 1.1rem;
-            word-break: break-all;
+            font-weight: 600;
+            transition: color 0.2s;
         }
 
         .contact-item a:hover {
+            color: #1d4ed8;
             text-decoration: underline;
         }
 
@@ -136,66 +118,31 @@
             background-color: #0f172a;
             color: #94a3b8;
             text-align: center;
-            padding: 2rem;
+            padding: 1rem;
             font-size: 0.9rem;
-        }
-
-        @media (max-width: 480px) {
-            .contact-container {
-                padding: 2rem 1.5rem;
-            }
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            height: 50px;
         }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html" class="active">Accueil</a>
-    <a href="SAE.html">Mes SAÉ</a>
-    <a href="mesdiplomes.html">Mes Diplômes</a>
-    <a href="mescoordonnées.html">Contact</a>
-</nav>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="SAE.html">Mes SAÉ</a>
+        <a href="mesdiplomes.html">Mes Diplômes</a>
+        <a href="mescoordonneas.html" class="active">Contact</a>
+    </nav>
 
     <main>
-        <div class="contact-container">
+        <div class="contact-box">
             <h1>Mes Coordonnées</h1>
-            <p class="subtitle">N'hésitez pas à me contacter pour toute opportunité de stage ou d'alternance.</p>
-
-            <div class="contact-methods">
-                
-                <div class="contact-item">
-                    <span class="icon">📧</span>
-                    <div>
-                        <div class="info-label">E-mail Professionnel</div>
-                        <a href="mailto:bonnamy.tristan25@email.com">bonnamy.tristan25@email.com</a>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <span class="icon">📱</span>
-                    <div>
-                        <div class="info-label">Téléphone</div>
-                        <a href="tel:+33786064514">07 86 06 45 14</a>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <span class="icon">💼</span>
-                    <div>
-                        <div class="info-label">LinkedIn</div>
-                        <a href="https://linkedin.com/in/tristan-bonnamy-5243b9413/" target="_blank">tristan-bonnamy</a>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <span class="icon">💻</span>
-                    <div>
-                        <div class="info-label">GitHub</div>
-                        <a href="https://github.com/Ti-ti25" target="_blank">Ti-ti25</a>
-                    </div>
-                </div>
-
-            </div>
+            <ul class="contact-list">
+                <li class="contact-item">📧 <strong>Email :</strong> <a href="mailto:bonnamy.tristan25@email.com">bonnamy.tristan25@email.com</a></li>
+                <li class="contact-item">📱 <strong>Téléphone :</strong> <a href="tel:+33786064514">07 86 06 45 14</a></li>
+                <li class="contact-item">💼 <strong>LinkedIn :</strong> <a href="https://linkedin.com/in/tristan-bonnamy-5243b9413/" target="_blank">tristan-bonnamy</a></li>
+                <li class="contact-item">💻 <strong>GitHub :</strong> <a href="https://github.com/Ti-ti25" target="_blank">Ti-ti25</a></li>
+            </ul>
         </div>
     </main>
 
