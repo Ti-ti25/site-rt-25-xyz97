@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil | Mon Portfolio BUT R&T</title>
+    <style>
+        
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a, #0f172a);
+            color: white;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            color: #94a3b8;
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+        }
+
+        .about-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 650px;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        .about-box h2 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.3rem;
+        }
+
+        .about-box ul {
+            list-style: none;
+        }
+
+        .about-box li {
+            margin-bottom: 0.5rem;
+            color: #cbd5e1;
+        }
+
+        .cta-container {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.05rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="active">Accueil</a>
+    <a href="SAE.html">Mes SAÉ</a>
+    <a href="mesdiplomes.html">Mes Diplômes</a>
+    <a href="mescoordonnées.html">Contact</a>
+</nav>
+
+    <section class="hero">
+        <h1>Tristan Bonnamy</h1>
+        <p>Étudiant en BUT Réseaux & Télécommunications</p>
+        
+        <div class="about-box">
+            <h2>À propos de moi</h2>
+            <p style="font-size: 1.05rem; color: #e2e8f0; margin-bottom: 1rem;">
+                Actuellement en formation R&T, je développe des compétences solides en administration d'infrastructures informatiques, en sécurisation des systèmes et en traitement de données.
+            </p>
+            <ul>
+                <li>⚙️ <strong>Systèmes :</strong> Administration Linux (Debian), Scripting Bash & automatisation</li>
+                <li>🛡️ <strong>Sécurité :</strong> Analyse protocolaires de bas niveau, détection de failles, IoT</li>
+                <li>🐍 <strong>Développement :</strong> Programmation Python (traitement de données, manipulation de paquets)</li>
+            </ul>
+        </div>
+
+    <div class="cta-container">
+        <a href="SAE.html" class="btn btn-primary">Consulter mes projets (SAÉ)</a>
+        <a href="mesdiplomes.html" class="btn btn-secondary">Mes Diplômes</a>
+        <a href="mescoordonnées.html" class="btn btn-secondary">Mes Coordonnées</a>
+    </div>
+    </section>
+
+<!-- CONTACT -->
+<section id="contact" style="background-color: #0f172a; padding: 2rem 1rem; text-align: center;">
+    <h2 style="color: #ffffff; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-size: 1.8rem;">Contact & Liens</h2>
+    <p style="color: #94a3b8; font-size: 1.1rem; margin: 0;">
+        📧 Émail : <a href="mailto:bonnamy.tristan25@email.com" style="color: #ffffff; font-weight: 600; text-decoration: none; transition: color 0.3s;">bonnamy.tristan25@email.com</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+        📱 Téléphone : <a href="tel:+33786064514" style="color: #ffffff; font-weight: 600; text-decoration: none; transition: color 0.3s;">07 86 06 45 14</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+        💼 LinkedIn : <a href="https://linkedin.com/in/tristan-bonnamy-5243b9413/" target="_blank" style="color: #ffffff; font-weight: 600; text-decoration: none; transition: color 0.3s;">tristan-bonnamy</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+        💻 GitHub : <a href="https://github.com/Ti-ti25" target="_blank" style="color: #ffffff; font-weight: 600; text-decoration: none; transition: color 0.3s;">Ti-ti25</a>
+    </p>
+</section>
+
+    <footer>
+        <p>&copy; 2026 - Portfolio BUT Réseaux & Télécommunications. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

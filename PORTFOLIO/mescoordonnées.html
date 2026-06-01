@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e3a8a, #0f172a);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Force le body à prendre tout l'écran */
+            overflow: hidden; /* Évite les barres de défilement inutiles */
+        }
+
+        nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            height: 60px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--primary) !important;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Centre verticalement la boîte */
+            padding: 1rem;
+        }
+
+        .contact-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #1e3a8a;
+            margin-bottom: 2rem;
+        }
+
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            font-size: 1.05rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Aligne le contenu à gauche à l'intérieur */
+        }
+
+        .contact-item strong {
+            margin-left: 0.5rem; /* Espace après l'émoji */
+            margin-right: 0.5rem; /* Espace avant le lien */
+            color: var(--text-main);
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .contact-item a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="SAE.html">Mes SAÉ</a>
+        <a href="mesdiplomes.html">Mes Diplômes</a>
+        <a href="mescoordonneas.html" class="active">Contact</a>
+    </nav>
+
+    <main>
+        <div class="contact-box">
+            <h1>Mes Coordonnées</h1>
+            <ul class="contact-list">
+                <li class="contact-item">📧 <strong>Email :</strong> <a href="mailto:bonnamy.tristan25@email.com">bonnamy.tristan25@email.com</a></li>
+                <li class="contact-item">📱 <strong>Téléphone :</strong> <a href="tel:+33786064514">07 86 06 45 14</a></li>
+                <li class="contact-item">💼 <strong>LinkedIn :</strong> <a href="https://linkedin.com/in/tristan-bonnamy-5243b9413/" target="_blank">tristan-bonnamy</a></li>
+                <li class="contact-item">💻 <strong>GitHub :</strong> <a href="https://github.com/Ti-ti25" target="_blank">Ti-ti25</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Portfolio BUT Réseaux & Télécommunications. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

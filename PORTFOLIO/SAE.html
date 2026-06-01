@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes SAÉ | Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff; /* Cartes blanches d'origine */
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e3a8a, #0f172a); /* Grand fond bleu comme l'accueil */
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background-color: #ffffff; /* Menu du haut blanc d'origine */
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--primary) !important;
+        }
+
+        main {
+            max-width: 1000px;
+            width: 100%;
+            margin: auto;
+            padding: 2rem 1rem;
+            flex-grow: 1;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #ffffff; /* Titre en blanc pour ressortir sur le fond bleu */
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #38bdf8;
+            padding-bottom: 0.5rem;
+        }
+
+        .sae-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sae-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); /* Ombre renforcée sur fond sombre */
+        }
+
+        .sae-title {
+            font-size: 1.4rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .sae-subtitle {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .sae-desc {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="SAE.html" class="active">Mes SAÉ</a>
+        <a href="mesdiplomes.html">Mes Diplômes</a>
+        <a href="mescoordonnées.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>Mes Situations d'Apprentissage Évaluées (SAÉ)</h1>
+        
+        <div class="sae-container">
+            <div class="sae-card">
+                <div class="sae-title">SAÉ 1.02 | Éléments de l'infrastructure réseau</div>
+                <div class="sae-subtitle">Configuration de commutateurs et routeurs</div>
+                <p class="sae-desc">Découverte et mise en œuvre des architectures réseaux basiques, adressage IPv4 et configuration initiale de matériel Cisco/Debian.</p>
+            </div>
+
+            <div class="sae-card">
+                <div class="sae-title">SAÉ 1.05 | Traitement de données informatiques</div>
+                <div class="sae-subtitle">Programmation structurée avec Python</div>
+                <p class="sae-desc">Automatisation et analyse de fichiers de logs ou de captures Wireshark à l'aide de scripts en langage Python.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Portfolio BUT Réseaux & Télécommunications. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
